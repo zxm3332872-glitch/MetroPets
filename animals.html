@@ -1,8 +1,342 @@
-<main class="container">
-    <h1>Meet Our Animals</h1>
-    <p>Assignee: Xiaoming (Marcus) Zhong</p>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-        <div style="background: white; padding: 20px; border: 1px solid #ddd;">Pet Card Placeholder</div>
-        <div style="background: white; padding: 20px; border: 1px solid #ddd;">Pet Card Placeholder</div>
-    </div>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroPets - Our Animals</title>
+    <link rel="stylesheet" href="css.css">
+    
+    <style>
+        .pet-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 2rem;
+            justify-content: flex-start;
+        }
+        
+        .pet-card {
+            width: calc(25% - 19px);
+            min-width: 220px; 
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .pet-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .pet-card img {
+            width: 100%;
+            /* 强制保持 1254:1881 (即 2:3) 的原始肖像比例 */
+            aspect-ratio: 1254 / 1881;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pet-info {
+            padding: 20px 10px;
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .pet-name {
+            font-family: var(--headline-font);
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+
+        .pet-details {
+            font-size: 0.95rem;
+            margin: 3px 0;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* 响应式断点调整 */
+        @media (max-width: 1100px) {
+            .pet-card { width: calc(33.333% - 17px); }
+        }
+        @media (max-width: 768px) {
+            .pet-card { width: calc(50% - 13px); }
+        }
+        @media (max-width: 480px) {
+            .pet-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">MetroPets</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donation.html">Donation</a></li>
+            <li><a href="calendar.html">Events</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <h1>Meet Our Furry Friends</h1>
+        <p>Assignee: Marcus</p>
+        <p>Welcome to our family! Explore the profiles of our 26 wonderful companions currently waiting for their forever homes.</p>
+        
+        <div class="pet-gallery">
+            <a href="anima01.html" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_d2ab56e2411d421c8a3b82411d84c9b4~mv2.webp" alt="Bella">
+                <div class="pet-info">
+                    <h3 class="pet-name">Bella</h3>
+                    <p class="pet-details">Age: 2 Years</p>
+                    <p class="pet-details">Breed: Labrador Mix</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_cd93d4af12ff4e308eea29613835a943~mv2.png" alt="Luna">
+                <div class="pet-info">
+                    <h3 class="pet-name">Luna</h3>
+                    <p class="pet-details">Age: 1 Year</p>
+                    <p class="pet-details">Breed: Domestic Shorthair</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_a8a60ea3bf274cc5950ec92fa7847fa4~mv2.webp" alt="Charlie">
+                <div class="pet-info">
+                    <h3 class="pet-name">Charlie</h3>
+                    <p class="pet-details">Age: 3 Years</p>
+                    <p class="pet-details">Breed: Golden Retriever</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_6344fba0b4a0420ea237598c9aec6c7e~mv2.webp" alt="Milo">
+                <div class="pet-info">
+                    <h3 class="pet-name">Milo</h3>
+                    <p class="pet-details">Age: 6 Months</p>
+                    <p class="pet-details">Breed: Tabby Cat</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_4bf59c1b1bbc487eb3eebd88f3eebd2d~mv2.webp" alt="Daisy">
+                <div class="pet-info">
+                    <h3 class="pet-name">Daisy</h3>
+                    <p class="pet-details">Age: 4 Years</p>
+                    <p class="pet-details">Breed: Beagle</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_21c66424ec6b4f88ab3dce8ebb4db986~mv2.webp" alt="Leo">
+                <div class="pet-info">
+                    <h3 class="pet-name">Leo</h3>
+                    <p class="pet-details">Age: 2 Years</p>
+                    <p class="pet-details">Breed: Maine Coon</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_464fc9a53a544a47a671a533e1c33be9~mv2.webp" alt="Max">
+                <div class="pet-info">
+                    <h3 class="pet-name">Max</h3>
+                    <p class="pet-details">Age: 5 Years</p>
+                    <p class="pet-details">Breed: German Shepherd</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_df7135ff1a4f48da9b0dff910ae5e66a~mv2.webp" alt="Chloe">
+                <div class="pet-info">
+                    <h3 class="pet-name">Chloe</h3>
+                    <p class="pet-details">Age: 1.5 Years</p>
+                    <p class="pet-details">Breed: Siamese</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_39899539e45b410bbf39066a4db39ba8~mv2.webp" alt="Cooper">
+                <div class="pet-info">
+                    <h3 class="pet-name">Cooper</h3>
+                    <p class="pet-details">Age: 2 Years</p>
+                    <p class="pet-details">Breed: Poodle</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_2e55e7569e3d493e9196008a5832d95e~mv2.webp" alt="Oliver">
+                <div class="pet-info">
+                    <h3 class="pet-name">Oliver</h3>
+                    <p class="pet-details">Age: 3 Years</p>
+                    <p class="pet-details">Breed: British Shorthair</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_f28dd2ac5e804d0d928b31c3b9e560a9~mv2.webp" alt="Stella">
+                <div class="pet-info">
+                    <h3 class="pet-name">Stella</h3>
+                    <p class="pet-details">Age: 1 Year</p>
+                    <p class="pet-details">Breed: French Bulldog</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_ff97c2bbe04e440c84b0cb4459f6ab2b~mv2.webp" alt="Jasper">
+                <div class="pet-info">
+                    <h3 class="pet-name">Jasper</h3>
+                    <p class="pet-details">Age: 2.5 Years</p>
+                    <p class="pet-details">Breed: Ragdoll Cat</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_783d32990d6b450880c1317fd51bcd0b~mv2.webp" alt="Rocky">
+                <div class="pet-info">
+                    <h3 class="pet-name">Rocky</h3>
+                    <p class="pet-details">Age: 6 Years</p>
+                    <p class="pet-details">Breed: Boxer</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_315040f754474f3d9e68cd3a9a0ec751~mv2.webp" alt="Lily">
+                <div class="pet-info">
+                    <h3 class="pet-name">Lily</h3>
+                    <p class="pet-details">Age: 8 Months</p>
+                    <p class="pet-details">Breed: Persian Cat</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_d59fc2f66efb4c04a4b7e52f5a4cc9be~mv2.webp" alt="Buster">
+                <div class="pet-info">
+                    <h3 class="pet-name">Buster</h3>
+                    <p class="pet-details">Age: 4 Years</p>
+                    <p class="pet-details">Breed: Dachshund</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_1e2ed068d19645b1a9348df4c21865cd~mv2.webp" alt="Nala">
+                <div class="pet-info">
+                    <h3 class="pet-name">Nala</h3>
+                    <p class="pet-details">Age: 3 Years</p>
+                    <p class="pet-details">Breed: Bengal Cat</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_9cc0385b35c94a5cbdbac454b9a4d2f3~mv2.webp" alt="Duke">
+                <div class="pet-info">
+                    <h3 class="pet-name">Duke</h3>
+                    <p class="pet-details">Age: 5 Years</p>
+                    <p class="pet-details">Breed: Siberian Husky</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_a94687fb254e4f499a6988f530983c78~mv2.webp" alt="Mia">
+                <div class="pet-info">
+                    <h3 class="pet-name">Mia</h3>
+                    <p class="pet-details">Age: 2 Years</p>
+                    <p class="pet-details">Breed: Russian Blue</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_5441ea9d0c484c02abf41eeda724b7e2~mv2.webp" alt="Finn">
+                <div class="pet-info">
+                    <h3 class="pet-name">Finn</h3>
+                    <p class="pet-details">Age: 4 Years</p>
+                    <p class="pet-details">Breed: Pembroke Welsh Corgi</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_99e3e48d4895403389164c8362f0e061~mv2.webp" alt="Ruby">
+                <div class="pet-info">
+                    <h3 class="pet-name">Ruby</h3>
+                    <p class="pet-details">Age: 1 Year</p>
+                    <p class="pet-details">Breed: Australian Shepherd</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_5574ead4e0a141e8bd0c3442e9abd285~mv2.webp" alt="Simba">
+                <div class="pet-info">
+                    <h3 class="pet-name">Simba</h3>
+                    <p class="pet-details">Age: 3 Years</p>
+                    <p class="pet-details">Breed: Orange Tabby</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_96b6acbd1ce049d59e938602b4e98019~mv2.webp" alt="Teddy">
+                <div class="pet-info">
+                    <h3 class="pet-name">Teddy</h3>
+                    <p class="pet-details">Age: 2 Years</p>
+                    <p class="pet-details">Breed: Shih Tzu</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_187f7e83b17d48189a77047abb77482f~mv2.webp" alt="Bailey">
+                <div class="pet-info">
+                    <h3 class="pet-name">Bailey</h3>
+                    <p class="pet-details">Age: 5 Years</p>
+                    <p class="pet-details">Breed: Border Collie</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_888e1ffdae324a9eabea5a19c136eb2b~mv2.webp" alt="Sophie">
+                <div class="pet-info">
+                    <h3 class="pet-name">Sophie</h3>
+                    <p class="pet-details">Age: 4 Years</p>
+                    <p class="pet-details">Breed: Birman Cat</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_82269f7613284d1caa041b076b80acc1~mv2.webp" alt="Jax">
+                <div class="pet-info">
+                    <h3 class="pet-name">Jax</h3>
+                    <p class="pet-details">Age: 3 Years</p>
+                    <p class="pet-details">Breed: Rottweiler Mix</p>
+                </div>
+            </a>
+
+            <a href="#" class="pet-card">
+                <img src="https://static.wixstatic.com/media/270438_4e7d44f7e5b04a4d8a4e6aa38a41e3f4~mv2.webp" alt="Rosie">
+                <div class="pet-info">
+                    <h3 class="pet-name">Rosie</h3>
+                    <p class="pet-details">Age: 2 Years</p>
+                    <p class="pet-details">Breed: Cocker Spaniel</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MetroPets Rescue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
