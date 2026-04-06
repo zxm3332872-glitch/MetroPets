@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroPets - Meet Bella</title>
+    <link rel="stylesheet" href="css.css">
+    
+    <style>
+        /* Top Section: Split Layout */
+        .pet-detail-wrapper {
+            display: flex;
+            gap: 40px;
+            margin-top: 2rem;
+            align-items: flex-start;
+        }
+
+        .pet-image-container {
+            flex: 1;
+        }
+
+        .pet-image-container img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            object-fit: cover;
+            /* Added a subtle border using your accent color */
+            border: 3px solid var(--accent-color);
+        }
+
+        .pet-info-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pet-info-container h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .pet-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .pet-story {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        /* Bottom Section: Adoption Form */
+        .adoption-section {
+            margin-top: 50px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .adoption-section h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .adoption-section p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .adoption-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: var(--body-font);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(44, 95, 45, 0.2);
+        }
+
+        .submit-btn {
+            grid-column: span 2;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: var(--headline-font);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 850px) {
+            .pet-detail-wrapper {
+                flex-direction: column;
+            }
+            .adoption-form {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .submit-btn {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">MetroPets</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donation.html">Donation</a></li>
+            <li><a href="calendar.html">Events</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <a href="animals.html" style="display: inline-block; margin-bottom: 1rem; color: var(--accent-color); font-weight: bold; text-decoration: none;">&larr; Back to Animals</a>
+        
+        <div class="pet-detail-wrapper">
+            <div class="pet-image-container">
+                <img src="https://static.wixstatic.com/media/270438_fe366c7c14fd4c678832256785498e6f~mv2.webp/v1/fill/w_1200,h_896,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sunset.webp" alt="Bella the Cockapoo">
+            </div>
+
+            <div class="pet-info-container">
+                <h1>Bella</h1>
+                
+                <div class="pet-tags">
+                    <span class="tag">Cockapoo</span>
+                    <span class="tag">2 Years Old</span>
+                    <span class="tag">Female</span>
+                </div>
+
+                <div class="pet-story">
+                    <h3 style="margin-top: 0; color: var(--primary-color);">Bella's Story</h3>
+                    <p>Meet Bella, an incredibly sweet and affectionate 2-year-old Cockapoo! With her gorgeous wavy coat and bright, soulful eyes, she melts the heart of everyone she meets. Bella originally came to MetroPets looking for a fresh start, and she is more than ready to find a loving forever family.</p>
+                    
+                    <p>Bella is the perfect mix of playful and cuddly. She absolutely loves her evening walks just as the sun sets, chasing after tennis balls, and sniffing around the neighborhood. When it's time to wind down, she is a professional snuggle bug who will happily curl up right next to you on the sofa for movie night.</p>
+                    
+                    <p>She is fully house-trained, great with children, and gets along wonderfully with other dogs. If you are looking for a loyal, cheerful, and loving companion to brighten your days, Bella is the one for you. Open your home to her, and she will fill it with endless joy!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="adoption-section">
+            <h2>Adoption Interest Form</h2>
+            <p class="subtitle">Ready to give Bella her forever home? Please fill out the form below, and our adoption team will contact you shortly.</p>
+            
+            <form class="adoption-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="e.g. Marcus">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="e.g. Smith">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="homeEnvironment">Describe your home environment (House, Apartment, Yard?)</label>
+                    <input type="text" id="homeEnvironment" name="homeEnvironment" placeholder="e.g. House with a fenced backyard">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Why do you want to adopt Bella? *</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Tell us a little bit about yourself and why Bella would be a great fit for your family..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Application for Bella</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MetroPets Rescue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
