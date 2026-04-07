@@ -1,8 +1,122 @@
-<main class="container">
-    <h1>Join Our Volunteer Team</h1>
-    <p>Assignee: Berry</p>
-    <form style="display: flex; flex-direction: column; max-width: 400px; gap: 10px;">
-        <input type="text" placeholder="Your Name">
-        <button style="background: var(--primary-color); color: white; border: none; padding: 10px;">Apply Now</button>
-    </form>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | MetroPets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="volunteer.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="animals.html">Animals</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="volunteer.html" class="active">Volunteer</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="donation.html">Donation</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Join Our Team</p>
+      <h1>Volunteer at MetroPets</h1>
+      <p class="hero-text">Make a difference in the lives of animals in need through hands-on care, community support, and meaningful shelter work.</p>
+      <a href="#signup" class="hero-button">Apply to Volunteer</a>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="content-section intro-section">
+      <h2>Why Volunteer?</h2>
+      <p>
+        Volunteering at MetroPets helps provide care, companionship, and support to animals while they wait for their forever homes.
+        It is also a great way to give back to the community, gain experience, and be part of a compassionate team.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Volunteer Roles</h2>
+      <div class="roles-grid">
+        <article class="card role-card">
+          <h3>Animal Care Assistant</h3>
+          <p>Help clean spaces, prepare supplies, and support daily care routines for shelter animals.</p>
+        </article>
+        <article class="card role-card">
+          <h3>Dog Walker</h3>
+          <p>Give dogs safe exercise, outdoor time, and positive attention throughout the day.</p>
+        </article>
+        <article class="card role-card">
+          <h3>Adoption Support</h3>
+          <p>Assist visitors, answer basic questions, and help create a welcoming adoption experience.</p>
+        </article>
+        <article class="card role-card">
+          <h3>Event Helper</h3>
+          <p>Support shelter events, donation drives, and outreach activities in the community.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>What Our Volunteers Say</h2>
+      <div class="testimonial-grid">
+        <article class="card testimonial">
+          <p class="quote">“Volunteering here changed my life. The work feels meaningful every single week.”</p>
+          <p class="author">— Maya, Volunteer</p>
+        </article>
+        <article class="card testimonial">
+          <p class="quote">“It is such a rewarding experience helping animals grow more comfortable and confident.”</p>
+          <p class="author">— Jordan, Volunteer</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section form-section" id="signup">
+      <h2>Volunteer Sign-Up</h2>
+      <p class="form-intro">Fill out the form below to tell us a little about yourself and the role that interests you most.</p>
+
+      <form id="volunteerForm" class="volunteer-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="role">Preferred Role</label>
+          <select id="role" name="role">
+            <option value="">Select a role</option>
+            <option value="Animal Care Assistant">Animal Care Assistant</option>
+            <option value="Dog Walker">Dog Walker</option>
+            <option value="Adoption Support">Adoption Support</option>
+            <option value="Event Helper">Event Helper</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="availability">Availability</label>
+          <input type="text" id="availability" name="availability" placeholder="Example: Weekends, Wednesday afternoons">
+        </div>
+
+        <button type="submit" class="submit-button">Submit Application</button>
+        <p id="message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 MetroPets Animal Shelter</p>
+  </footer>
+
+  <script src="volunteer.js"></script>
+</body>
+</html>
