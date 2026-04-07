@@ -1,0 +1,341 @@
+:root {
+  --bg-color: #faf8f3;
+  --surface-color: #ffffff;
+  --text-color: #3a4149;
+  --muted-text: #66707a;
+  --primary-color: #2c5f2d;
+  --accent-color: #b8945f;
+  --border-color: #e8dfd2;
+  --headline-font: 'Playfair Display', serif;
+  --body-font: 'Inter', Arial, sans-serif;
+  --shadow-soft: 0 10px 30px rgba(58, 65, 73, 0.07);
+  --shadow-hover: 0 16px 36px rgba(58, 65, 73, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 2px solid var(--accent-color);
+  backdrop-filter: blur(8px);
+}
+
+.nav-links {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+.hero {
+  padding: 90px 24px 70px;
+  background:
+    linear-gradient(rgba(250, 248, 243, 0.78), rgba(250, 248, 243, 0.92)),
+    radial-gradient(circle at top, rgba(184, 148, 95, 0.14), transparent 40%);
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+h1, h2, h3 {
+  font-family: var(--headline-font);
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: var(--primary-color);
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.45rem;
+  color: var(--primary-color);
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
+.hero-button,
+.submit-button {
+  display: inline-block;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-button {
+  padding: 14px 26px;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-button:hover,
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  background: var(--accent-color);
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 70px;
+}
+
+.content-section {
+  margin: 0 auto 34px;
+  padding: 34px 0;
+}
+
+.intro-section p,
+.form-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.05rem;
+}
+
+.roles-grid,
+.testimonial-grid {
+  display: grid;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.roles-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(184, 148, 95, 0.65);
+}
+
+.role-card {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.role-card p {
+  margin-bottom: 0;
+  color: var(--muted-text);
+}
+
+.testimonial {
+  padding: 28px;
+}
+
+.quote {
+  margin: 0 0 12px;
+  font-size: 1.08rem;
+}
+
+.author {
+  margin: 0;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 38px 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.volunteer-form {
+  max-width: 720px;
+  margin: 26px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #d8d2c8;
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
+  color: var(--text-color);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(184, 148, 95, 0.12);
+}
+
+.submit-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 14px 32px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-message {
+  grid-column: 1 / -1;
+  min-height: 28px;
+  margin: 2px 0 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-message.success {
+  color: var(--primary-color);
+}
+
+.form-message.error {
+  color: #a33d2f;
+}
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--muted-text);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 900px) {
+  .roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    position: static;
+  }
+
+  .nav-links {
+    gap: 16px 22px;
+    padding: 16px 18px;
+  }
+
+  .hero {
+    padding: 70px 20px 52px;
+  }
+
+  .page-container {
+    padding: 0 16px 50px;
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section {
+    padding: 28px 18px;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
