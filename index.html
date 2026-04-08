@@ -38,13 +38,13 @@
         <!-- SEARCH BAR  --- JAVASCRIPT -->
         <div id="searchFunction">
             <input form="textContent" id="formField">
-            <input type="button" value="Search!" id="searchButton">
+            <input type="button" value="Search" id="searchButton">
         </div>
             <p id="fb"> </p>
         
         <!-- MAIN CONTENT -------------- -->
         <h1>Welcome to MetroPets</h1>
-        <div id="banner">
+        <div class="banner">
              <img src="https://github.com/user-attachments/assets/8aa18a84-5366-4454-ac3e-50c625ee225a" alt="golden retriever image">
         </div>
 
@@ -110,14 +110,19 @@
             var searchInput = document.querySelector("#formField").value.toLowerCase();
             var feedback=document.querySelector("#fb");
             
-            if (searchInput === "about" || searchInput === "organization" || searchInput === "owner" || searchInput === "intro" || searchInput === "team" || searchInput === "mission" || searchInput === "goals" || searchInput === "values" || searchInput === "achievements" || searchInput === "milestones") {
-                feedback.innterHTML='<a href="about.html">About Us</a>';
+            if(searchInput === "") {
+                feedback.textContent="Request couldn't be processed. Please try again.";
             }
+            
+            else if (searchInput === "about" || searchInput === "organization" || searchInput === "owner" || searchInput === "intro" || searchInput === "team" || searchInput === "mission" || searchInput === "goals" || searchInput === "values" || searchInput === "achievements" || searchInput === "milestones") {
+                feedback.innerHTML='<a href="about.html">About Us</a>';
+            }
+
             else if (searchInput === "animal" || searchInput === "dog" || searchInput === "cat" || searchInput === "pets" || searchInput === "adopt" || searchInput === "breeds") {
                 feedback.innerHTML='<a href="animals.html">Meet the animals</a>';
             }
 
-            else if (searchInput === "money" || searchInput === "give" || searchInput === "donate" || searchInput === "form" || searchInput === "impact" ) {
+            else if (searchInput === "money" || searchInput === "give" || searchInput === "$" || searchInput === "donate" || searchInput === "form" || searchInput === "impact" ) {
                 feedback.innerHTML='<a href="donation.html">Donate</a>';
             }
 
@@ -125,7 +130,7 @@
                 feedback.innerHTML='<a href="volunteer.html">Volunteer</a>';
             }
 
-            else if(searchInput === "news" || searchInput === "newsletter" || searchInput === "stories" || searchInput === "success" || searchInput === "updates" || searchInput === "fundraising") {
+            else if(searchInput === "news" || searchInput === "new" || searchInput === "newsletter" || searchInput === "stories" || searchInput === "success" || searchInput === "updates" || searchInput === "fundraising") {
                 feedback.innerHTML='<a href="news.html">News</a>';
             }
 
