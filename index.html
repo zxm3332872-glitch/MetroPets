@@ -1,35 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8"><title>MetroPets - Home</title>
-    <link rel="stylesheet" href="css.css">
+    <title>MetroPets | Home</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML">
+
+    <!-- playfair display font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- lora font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <div class="logo">MetroPets</div>
+    <nav id="nav_bar">
         <ul>
+            <div id="logo">METROPETS</div>
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="animals.html">Animals</a></li>
-             <li><a href="shop.html">Shop</a></li>
+            <li><a href="donation.html">Donate</a></li>
             <li><a href="volunteer.html">Volunteer</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="donation.html">Donation</a></li>
-           
+            <li><a href="shop.html">Shop</a></li>
+            
         </ul>
     </nav>
+
     <main class="container">
+        <!-- SEARCH BAR  --- JAVASCRIPT -->
+         <!-- <div id="searchFunction">
+            <input form="textContent" id="searchBar">
+            <input type="button" value="Search!" id="searchButton">
+            <p id="fb"> </p>
+        </div> -->
+        
+        <!-- MAIN CONTENT -------------- -->
         <h1>Welcome to MetroPets</h1>
-        <p>Assignee: Lucie</p>
-        <div style="height: 300px; border: 2px dashed var(--accent-color); display: flex; align-items: center; justify-content: center;">
-            [Hero Banner Content Goes Here]
+        <div id="banner">
+            <img src="banner_dog.jpeg">
         </div>
+
+        <div id="intro_blurb">
+            <h2>Meet your new best friend today!</h2>
+            <h3>Based in Toronto, we are a non-profit devoted to finding homes for unhoused animals. Whether you adopt or donate, your help means everything. Make a difference today!</h3>
+        </div>
+
+        <div class="button_links">
+            <a id="animals_button" href="animals.html">Meet the animals</a>
+            <a id="donate_button" href="donation.html">Donate</a>
+        </div>
+
+        <div id="gallery_section">
+            <h2 id="gallery_header">Check out a few of our animals looking for a home</h2>
+            <div class="gallery">
+                <div class="gallery_item">
+                    <a target="_blank" href="cooper.jpeg">
+                        <img src="cooper.jpeg" alt="Fluffy whtie dog image">
+                    </a>
+                    <div class="desc">Cooper </div>
+                </div>
+
+                <div class="gallery_item">
+                    <a target="blank" href="oliver.jpeg">
+                        <img src="oliver.jpeg" alt="Brown-hair dog image">
+                    </a>
+                    <div class="desc">Oliver</div>
+                </div>
+
+                <div class="gallery_item">
+                    <a target="_blank" href="rocky.jpeg">
+                        <img src="rocky.jpeg" alt="Grey cat image">
+                    </a>
+                    <div class="desc">Rocky </div>
+                </div>
+
+                <div class="gallery_item">
+                    <a target="_blank" href="rosie.jpeg">
+                        <img src="rosie.jpeg" alt="Cream-colour labrador image">
+                    </a>
+                    <div class="desc">Rosie</div>
+                </div>
+            </div>
+            <div class="see_more">
+             <a id="see_more_button" href="animals.html">See more</a>
+            </div>
+        </div>
+        
+        <!-- SEARCH BAR  --- JAVASCRIPT -->
+        <div id="searchFunction">
+            <input form="textContent" id="inputSearch">
+            <input type="button" value="Search!" id="searchButton">
+            <p id="fb"> </p>
+        </div>
+        
     </main>
+
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 MetroPets. All rights reserved.</p>
+        <div id="footer-content">
+            <p id="copyright">&copy; 2026 MetroPets. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        
+
+        var button1=document.querySelector("#searchButton");
+            button1.addEventListener("click", searched);
+
+        // ----------------- FUNCTIONS ----------------- 
+        function searched(){
+            if (inputSearch == "dog") {
+                var feedback=document.querySelector("#fb");
+                feedback.textContent="hey";
+            }
+
+            else{
+                var feedback=document.querySelector("fb");
+                feedback.textContent="no";
+            }
+        }
+    </script>
 </body>
-</body>
+
 </html>
