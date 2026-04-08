@@ -4,94 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MetroPets - Meet Bella</title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="animals.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     
     <style>
-        /* Top Section: Split Layout */
-        .pet-detail-wrapper {
+        /* Base Variables based on previous context */
+        :root {
+            --primary-color: #2c5f2d;
+            --accent-color: #b8945f;
+            --text-color: #3a4149;
+            --bg-color: #faf8f3;
+            --headline-font: 'Playfair Display', serif;
+            --body-font: 'Lora', serif;
+        }
+
+        /* 1. Base Layout */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--body-font);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Nav Bar */
+        #nav_bar {
             display: flex;
-            gap: 40px;
-            margin-top: 2rem;
-            align-items: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 72px;
+            background: white;
+            border-bottom: 2px solid var(--accent-color);
         }
 
-        .pet-image-container {
-            flex: 1;
+        #nav_bar .logo {
+            color: var(--primary-color);
+            font-family: var(--headline-font);
+            font-weight: bold;
+            font-size: 22px;
         }
 
-        .pet-image-container img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            object-fit: cover;
-            /* Added a subtle border using your accent color */
-            border: 3px solid var(--accent-color);
-        }
-
-        .pet-info-container {
-            flex: 1;
+        #nav_bar ul {
             display: flex;
-            flex-direction: column;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .pet-info-container h1 {
-            font-size: 2.5rem;
+        #nav_bar ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-family: var(--body-font);
+        }
+
+        /* 2. Top Header Section (Centered) */
+        .pet-header-container {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .pet-header-container h1 {
+            font-family: var(--headline-font);
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
             margin-top: 0;
-            margin-bottom: 10px;
         }
 
         .pet-tags {
             display: flex;
             gap: 15px;
-            margin-bottom: 20px;
+            justify-content: center;
         }
 
         .tag {
             background-color: var(--primary-color);
             color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border-radius: 25px;
             font-size: 0.9rem;
             font-weight: bold;
         }
 
+        /* 3. Detail Section: Image (Left) & Story (Right) */
+        .pet-detail-wrapper {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start; /* Aligns container top with image top */
+            margin-bottom: 60px;
+        }
+
+        /* Left Side: Image */
+        .pet-image-container {
+            flex: 1.2;
+        }
+
+        .pet-image-container img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* Right Side: Info/Story */
+        .pet-info-container {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+
         .pet-story {
-            font-size: 1.05rem;
+            /* REQ: White Container */
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            /* Default alignment for paragraphs is now left within this container */
+            text-align: left; 
+        }
+
+        .pet-story h3 {
+            margin-top: 0; /* Ensures alignment with top edge of the image */
+            color: var(--primary-color);
+            font-family: var(--headline-font);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            /* REQ: Heading centered in white container */
+            text-align: center; 
+        }
+
+        .pet-story p {
             line-height: 1.8;
             color: #444;
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary-color);
+            margin-bottom: 15px;
+            /* Paragraphs automatically inherit text-align: left from .pet-story */
         }
 
-        /* Bottom Section: Adoption Form */
+        /* 4. Adoption Form Section */
         .adoption-section {
-            margin-top: 50px;
             background-color: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--accent-color);
-        }
-
-        .adoption-section h2 {
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .adoption-section p.subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--accent-color);
         }
 
         .adoption-form {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .form-group {
@@ -99,153 +169,130 @@
             flex-direction: column;
         }
 
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-
         .form-group label {
             font-weight: bold;
             margin-bottom: 8px;
-            color: var(--text-color);
         }
 
-        .form-group input, 
-        .form-group textarea {
+        .form-group input, .form-group textarea {
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 6px;
             font-family: var(--body-font);
             font-size: 1rem;
-            transition: border-color 0.3s ease;
         }
 
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 5px rgba(44, 95, 45, 0.2);
-        }
+        .form-group.full-width { grid-column: span 2; }
 
         .submit-btn {
             grid-column: span 2;
             background-color: var(--primary-color);
             color: white;
+            padding: 18px;
             border: none;
-            padding: 15px;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: 0.3s;
             font-family: var(--headline-font);
         }
 
-        .submit-btn:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
+        .submit-btn:hover { background-color: var(--accent-color); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #888;
+            font-size: 0.9rem;
         }
 
-        /* Responsive adjustments for mobile */
-        @media (max-width: 850px) {
-            .pet-detail-wrapper {
-                flex-direction: column;
-            }
-            .adoption-form {
-                grid-template-columns: 1fr;
-            }
-            .form-group.full-width {
-                grid-column: span 1;
-            }
-            .submit-btn {
-                grid-column: span 1;
-            }
+        /* 5. Responsive Design */
+        @media (max-width: 900px) {
+            .pet-detail-wrapper { flex-direction: column; }
+            #nav_bar { padding: 16px 20px; }
+            .adoption-form { grid-template-columns: 1fr; }
+            .form-group.full-width, .submit-btn { grid-column: span 1; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">MetroPets</div>
-        <ul>
+
+    <nav id="nav_bar" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo">METROPETS</div>
+        <ul style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="animals.html">Animals</a></li>
+            <li><a href="donation.html">Donate</a></li>
             <li><a href="volunteer.html">Volunteer</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="donation.html">Donation</a></li>
-            <li><a href="calendar.html">Events</a></li>
+            <li><a href="shop.html">Shop</a></li>
+    
         </ul>
     </nav>
-    
+
     <main class="container">
-        <a href="animals.html" style="display: inline-block; margin-bottom: 1rem; color: var(--accent-color); font-weight: bold; text-decoration: none;">&larr; Back to Animals</a>
-        
+        <div style="display: flex; justify-content: flex-end; margin-top: 10px; margin-bottom: 10px;">
+            <a href="animals.html" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">&Larr;Back to Animals </a>
+        </div>
+
+        <div class="pet-header-container">
+            <h1>Bella</h1>
+            <div class="pet-tags">
+                <span class="tag">Cockapoo</span>
+                <span class="tag">2 Years Old</span>
+                <span class="tag">Female</span>
+            </div>
+        </div>
+
         <div class="pet-detail-wrapper">
             <div class="pet-image-container">
-                <img src="https://static.wixstatic.com/media/270438_fe366c7c14fd4c678832256785498e6f~mv2.webp/v1/fill/w_1200,h_896,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sunset.webp" alt="Bella the Cockapoo">
+                <img src="https://static.wixstatic.com/media/270438_fe366c7c14fd4c678832256785498e6f~mv2.webp/v1/fill/w_1200,h_896,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sunset.webp" alt="Bella">
             </div>
 
             <div class="pet-info-container">
-                <h1>Bella</h1>
-                
-                <div class="pet-tags">
-                    <span class="tag">Cockapoo</span>
-                    <span class="tag">2 Years Old</span>
-                    <span class="tag">Female</span>
-                </div>
-
                 <div class="pet-story">
-                    <h3 style="margin-top: 0; color: var(--primary-color);">Bella's Story</h3>
-                    <p>Meet Bella, an incredibly sweet and affectionate 2-year-old Cockapoo! With her gorgeous wavy coat and bright, soulful eyes, she melts the heart of everyone she meets. Bella originally came to MetroPets looking for a fresh start, and she is more than ready to find a loving forever family.</p>
-                    
-                    <p>Bella is the perfect mix of playful and cuddly. She absolutely loves her evening walks just as the sun sets, chasing after tennis balls, and sniffing around the neighborhood. When it's time to wind down, she is a professional snuggle bug who will happily curl up right next to you on the sofa for movie night.</p>
-                    
-                    <p>She is fully house-trained, great with children, and gets along wonderfully with other dogs. If you are looking for a loyal, cheerful, and loving companion to brighten your days, Bella is the one for you. Open your home to her, and she will fill it with endless joy!</p>
+                    <h3>Bella's Story</h3>
+                    <p>Meet Bella, an incredibly sweet and affectionate 2-year-old Cockapoo! With her gorgeous wavy coat and bright, soulful eyes, she melts the heart of everyone she meets.</p>
+                    <p>Bella is the perfect mix of playful and cuddly. She absolutely loves her evening walks just as the sun sets, chasing after tennis balls, and sniffing around the neighborhood.</p>
+                    <p>She is fully house-trained, great with children, and gets along wonderfully with other dogs. If you are looking for a loyal, cheerful, and loving companion, Bella is the one for you!</p>
                 </div>
             </div>
         </div>
 
-        <div class="adoption-section">
-            <h2>Adoption Interest Form</h2>
-            <p class="subtitle">Ready to give Bella her forever home? Please fill out the form below, and our adoption team will contact you shortly.</p>
+        <section class="adoption-section">
+            <h2 style="text-align: center; font-family: var(--headline-font); font-size: 2.2rem; margin-bottom: 10px; margin-top: 0;">Adoption Interest Form</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">Ready to give Bella her forever home? Please fill out the form below.</p>
             
-            <form class="adoption-form" action="#" method="POST">
+            <form class="adoption-form">
                 <div class="form-group">
-                    <label for="firstName">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required placeholder="e.g. Marcus">
+                    <label>First Name *</label>
+                    <input type="text" required placeholder="e.g. Marcus">
                 </div>
-                
                 <div class="form-group">
-                    <label for="lastName">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required placeholder="e.g. Smith">
+                    <label>Last Name *</label>
+                    <input type="text" required placeholder="e.g. Smith">
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
-                </div>
-                
                 <div class="form-group full-width">
-                    <label for="homeEnvironment">Describe your home environment (House, Apartment, Yard?)</label>
-                    <input type="text" id="homeEnvironment" name="homeEnvironment" placeholder="e.g. House with a fenced backyard">
+                    <label>Email Address *</label>
+                    <input type="email" required placeholder="yourname@email.com">
                 </div>
-
                 <div class="form-group full-width">
-                    <label for="message">Why do you want to adopt Bella? *</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Tell us a little bit about yourself and why Bella would be a great fit for your family..."></textarea>
+                    <label>Why do you want to adopt Bella? *</label>
+                    <textarea rows="4" required placeholder="Tell us about your home and why Bella would be a good fit..."></textarea>
                 </div>
-                
                 <button type="submit" class="submit-btn">Submit Application for Bella</button>
             </form>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 MetroPets Rescue. All rights reserved.</p>
+        <div id="footer-content">
+            <p id="copyright">&copy; 2026 MetroPets. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
