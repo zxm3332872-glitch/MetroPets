@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MetroPets - Our Animals</title>
-    
-    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animals.css">
     
     <style>
         .pet-gallery {
@@ -13,12 +13,12 @@
             flex-wrap: wrap;
             gap: 25px;
             margin-top: 2rem;
-            justify-content: flex-start;
+            justify-content: center;
         }
         
         .pet-card {
-            width: calc(25% - 19px);
-            min-width: 220px; 
+            width: calc(15% - 15px);
+            min-width: 120px; 
             background-color: white;
             border: 1px solid #e0e0e0;
             border-radius: 12px;
@@ -80,22 +80,23 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">MetroPets</div>
-        <ul>
+    <nav id="nav_bar" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo">METROPETS</div>
+        <ul style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="animals.html">Animals</a></li>
+            <li><a href="donation.html">Donate</a></li>
             <li><a href="volunteer.html">Volunteer</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="donation.html">Donation</a></li>
-            <li><a href="calendar.html">Events</a></li>
+            <li><a href="shop.html">Shop</a></li>
+    
         </ul>
     </nav>
     
     <main class="container">
         <h1>Meet Our Furry Friends</h1>
-        <p>Welcome to our family! Explore the profiles of our 26 wonderful companions currently waiting for their forever homes.</p>
+        <p style="text-align: center;">Welcome to our family! Explore the profiles of our  wonderful companions currently waiting for their forever homes.</p>
         
         <div class="pet-gallery">
             <a href="animal01.html" class="pet-card">
@@ -336,7 +337,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 MetroPets Rescue. All rights reserved.</p>
+        <div id="footer-content">
+            <p id="copyright">&copy; 2026 MetroPets. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
