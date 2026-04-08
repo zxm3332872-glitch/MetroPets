@@ -110,17 +110,32 @@
             var searchInput = document.querySelector("#formField").value.toLowerCase();
             var feedback=document.querySelector("#fb");
             
-            if (searchInput === "dog" || searchInput === "woof" || searchInput === "cat") {
-                // feedback.textContent="dog!";
+            if (searchInput === "about" || searchInput === "organization" || searchInput === "owner" || searchInput === "intro" || searchInput === "team" || searchInput === "mission" || searchInput === "goals" || searchInput === "values" || searchInput === "achievements" || searchInput === "milestones") {
+                feedback.innterHTML='<a href="about.html">About Us</a>';
+            }
+            else if (searchInput === "animal" || searchInput === "dog" || searchInput === "cat" || searchInput === "pets" || searchInput === "adopt" || searchInput === "breeds") {
                 feedback.innerHTML='<a href="animals.html">Meet the animals</a>';
             }
 
-            else if (searchInput === "money" || searchInput === "give") {
+            else if (searchInput === "money" || searchInput === "give" || searchInput === "donate" || searchInput === "form" || searchInput === "impact" ) {
                 feedback.innerHTML='<a href="donation.html">Donate</a>';
             }
 
+            else if(searchInput === "volunteer" || searchInput === "roles" || searchInput === "testimonials" || searchInput === "signup" || searchInput === "get involved" || searchInput === "help") {
+                feedback.innerHTML='<a href="volunteer.html">Volunteer</a>';
+            }
+
+            else if(searchInput === "news" || searchInput === "newsletter" || searchInput === "stories" || searchInput === "success" || searchInput === "updates" || searchInput === "fundraising") {
+                feedback.innerHTML='<a href="news.html">News</a>';
+            }
+
+            else if(searchInput === "shop" || searchInput === "products" || searchInput === "buy" || searchInput === "shopping" || searchInput === "cart" || searchInput === "shopping cart") {
+                feedback.innerHTML='<a href="shop.html">Shop</a>';
+            }
+
             else {
-                feedback.textContent="keyword not found";
+                feedback.textContent="Format not recognized. Please check spelling.";
+                feedback.style.color="red";
             }
         }
     </script>
