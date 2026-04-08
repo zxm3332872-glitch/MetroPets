@@ -16,6 +16,7 @@
 #searchButton{
     background-color:#2c5f2d;
     color:#faf8f3;
+    font-family:'Lora';
     border: none;
     border-radius:50px;
     padding: 8px 20px;
@@ -28,7 +29,7 @@
 #fb{
    text-align:right;
    padding-right: 72px;
-    font-family: 'Lora';
+   font-family: 'Lora';
 }
 
 /* ------------------------------ LOGO ------------------------------ */
@@ -75,10 +76,14 @@ ul li a:hover {
 }
 
 /* ----------------------------- BODY ---------------------------- */
-#banner {
+.banner {
     max-width: fit-content;
     margin:auto;
     object-position: center;
+}
+
+div.banner img {
+    border-radius:12px;
 }
 
 h1{
@@ -122,15 +127,8 @@ body {
 /* ---------------------------- GALLERY ----------------------------- */
 #gallery_header{
     font-family: 'Playfair Display';
-    padding-top: 30px;
+    padding-top: 40px;
     text-align: center;
-}
-
-.gallery{
-    display:flex;
-    max-width: width 1100px;
-    margin:auto;
-    justify-content: center;
 }
 /* ---------------------- gallery background */
 #gallery_section{
@@ -138,24 +136,22 @@ body {
 }
 
 /* ---------------------- gallery container */
-div.gallery {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
+    margin:auto;
+    justify-content: center;
     font-family: 'Lora';
         font-weight: bold;
 }
 
-/* ---------------------- gallery item specifications */
-div.gallery_item {
+/* ---------------------- gallery image-specific sizing & specs */
+div.gallery_item img{
     margin: 5px;
     width: 250px;
-}
-
-/* ---------------------- gallery image sizing */
-div.gallery_item img{
-    width: 100%;
     height: auto;
+    border-radius: 12px;
 }
 
 /* ---------------------- gallery image descriptions */
