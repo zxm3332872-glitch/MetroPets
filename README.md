@@ -1,0 +1,5 @@
+![banner_dog](https://github.com/user-attachments/assets/8aa18a84-5366-4454-ac3e-50c625ee225a)
+![rosie](https://github.com/user-attachments/assets/dacf39c6-9d9f-4ca6-ac5b-bcacc613bc35)
+![rocky](https://github.com/user-attachments/assets/1b162646-9eb1-4edd-9bff-b54549c1a9d9)
+![oliver](https://github.com/user-attachments/assets/737d2a99-f297-41ce-9c7d-2ebc83378775)
+![cooper](https://github.com/user-attachments/assets/0a0205cc-e2b7-46fc-9dc2-1ea03843a7fc)
