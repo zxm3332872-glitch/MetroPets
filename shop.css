@@ -38,7 +38,9 @@ nav {
 
 .logo {
     font-family: var(--headline-font);
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 14px 16px;
     color: var(--primary-color);
 }
 
