@@ -1,8 +1,297 @@
-<main class="container">
-    <h1 style="color: var(--accent-color);">Support Our Mission</h1>
-    <p>Assignee: Rosie</p>
-    <div style="background: #eee; padding: 40px; text-align: center;">
-        <h2>Make a Donation</h2>
-        <p>Your contribution helps us save lives.</p>
-    </div>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation - MetroPets</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="donation.css">
+
+</head>
+<body>
+
+    <nav id="nav_bar">
+        <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donation.html">Donate</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <div id="logo">METROPETS</div>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="herosection">
+            <div class="herotext">
+                <h1>Why Your Donation Matters</h1>    
+                <p> Your contribution helps us provide food, medical care, and a safe shelter for pets in need.</p>
+            </div>
+        </div>
+
+        <div class="donationlayout">
+            <div class="impact">
+                <h2>How You Help</h2>
+                <div class="impactitems">
+                    <div class="impactitem">
+                        <h3>$10</h3>
+                        <p>Provides food for a week for one pet.</p>
+                    </div>
+                    <div class="impactitem">
+                        <h3>$25</h3>
+                        <p>Covers essential vaccinations to keep them healthy.</p>
+                    </div>
+                    <div class="impactitem">
+                        <h3>$50+</h3>
+                        <p>Provides emergency medical care and shelter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donationcard">
+                <form id="donationform"> 
+                    <h2>Donation Form</h2>
+
+                    <div class="formgroup">
+
+                        <label>Donation Amount:</label>
+                        <div class="amountbuttons">
+                            <button type="button" id="b1" class="amountbutton">$10</button>
+                            <button type="button" id="b2" class="amountbutton">$25</button>
+                            <button type="button" id="b3" class="amountbutton">$50</button>
+                        </div>
+
+                        <input type="number" id="customamount" class="inputfield" placeholder="$ Custom amount">
+
+                    </div>
+
+                    <div class="formgroup">
+                        <input type="text" id="fullname" class="inputfield" placeholder="Full Name">
+                    </div>
+
+                    <div class="formgroup">
+                        <input type="email" id="emailaddress" class="inputfield" placeholder="Email Address (e.g., abc@gmail.com)">
+                    </div>
+
+                    <div class="formgroup">
+                        <input type="text" id="cardnumber" class="inputfield" placeholder="Credit Card Number (e.g., 1234 5678 1234 5678)">
+                    </div>
+
+                    <div class="formgroup">
+                        <p style="font-weight: bold; color: var(--primary-color);">Total Donation: $<span id="totaldisplay">0</span></p>  
+                    </div>
+
+                    <p id="messagebox" ></p>
+
+                    <button type="button" id="submitbutton" class="submitbutton"><svg width="24" height="24" viewBox="0 0 48.839 48.839" fill="currentColor">
+                       <path d="M39.041,36.843c2.054,3.234,3.022,4.951,3.022,6.742c0,3.537-2.627,5.252-6.166,5.252
+                       c-1.56,0-2.567-0.002-5.112-1.326c0,0-1.649-1.509-5.508-1.354c-3.895-0.154-5.545,1.373-5.545,1.373
+                       c-2.545,1.323-3.516,1.309-5.074,1.309c-3.539,0-6.168-1.713-6.168-5.252c0-1.791,0.971-3.506,3.024-6.742
+                       c0,0,3.881-6.445,7.244-9.477c2.43-2.188,5.973-2.18,5.973-2.18h1.093v-0.001c0,0,3.698-0.009,5.976,2.181
+                       C35.059,30.51,39.041,36.844,39.041,36.843z M16.631,20.878c3.7,0,6.699-4.674,6.699-10.439S20.331,0,16.631,0
+                       S9.932,4.674,9.932,10.439S12.931,20.878,16.631,20.878z M10.211,30.988c2.727-1.259,3.349-5.723,1.388-9.971
+                       s-5.761-6.672-8.488-5.414s-3.348,5.723-1.388,9.971C3.684,29.822,7.484,32.245,10.211,30.988z M32.206,20.878
+                       c3.7,0,6.7-4.674,6.7-10.439S35.906,0,32.206,0s-6.699,4.674-6.699,10.439C25.507,16.204,28.506,20.878,32.206,20.878z
+                       M45.727,15.602c-2.728-1.259-6.527,1.165-8.488,5.414s-1.339,8.713,1.389,9.972c2.728,1.258,6.527-1.166,8.488-5.414
+                       S48.455,16.861,45.727,15.602z"></path>
+                   </svg> DONATE</button>
+               </form>
+           </div>
+       </div>
+       <footer>
+        <div id="footer-content">
+            <p id="copyright">&copy; 2026 MetroPets. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        var b1=document.querySelector("#b1");
+        var b2=document.querySelector("#b2");
+        var b3=document.querySelector("#b3");
+
+        var fullname=document.querySelector("#fullname");
+        var emailaddress=document.querySelector("#emailaddress");
+        var cardnumber=document.querySelector("#cardnumber");
+        var customamount=document.querySelector("#customamount");
+        var totaldisplay=document.querySelector("#totaldisplay");
+
+        var submitbutton=document.querySelector("#submitbutton");
+
+        var totalamount=0
+
+        b1.addEventListener("mouseover", gradient);
+        b2.addEventListener("mouseover", gradient);
+        b3.addEventListener("mouseover", gradient);
+
+        b1.addEventListener("mouseout", back);
+        b2.addEventListener("mouseout", back);
+        b3.addEventListener("mouseout", back);
+
+        b1.addEventListener("click", handlebuttonamount);
+        b2.addEventListener("click", handlebuttonamount);
+        b3.addEventListener("click", handlebuttonamount);
+
+        fullname.addEventListener("mouseover", border);
+        emailaddress.addEventListener("mouseover", border);
+        cardnumber.addEventListener("mouseover", border);
+        customamount.addEventListener("mouseover", border);
+
+        fullname.addEventListener("mouseout", back2);
+        emailaddress.addEventListener("mouseout", back2);
+        cardnumber.addEventListener("mouseout", back2);
+        customamount.addEventListener("mouseout", back2);
+
+        submitbutton.addEventListener("mouseover", bold);
+        submitbutton.addEventListener("mouseout", back3);
+
+        submitbutton.addEventListener("click", checkform);
+
+        function gradient(){
+            if (this.id=="b1"){this.style.background = 'linear-gradient(to bottom, #ffffff 0%, #e2e8f0 100%)';}
+            else if(this.id=="b2"){this.style.background = 'linear-gradient(to bottom, #ffffff 0%, #e2e8f0 100%)';}
+            else if(this.id=="b3"){this.style.background = 'linear-gradient(to bottom, #ffffff 0%, #e2e8f0 100%)';}
+        }
+
+        function back(){
+            if (this.id=="b1"){this.style.background = ''}
+               else if(this.id=="b2"){this.style.background = ''}
+                else if(this.id=="b3"){this.style.background = ''}
+            }
+
+        function border(){
+            if (this.id=="fullname"){this.style.border = "2px solid var(--primary-color)";}
+            else if(this.id=="emailaddress"){this.style.border = "2px solid var(--primary-color)";}
+            else if(this.id=="cardnumber"){this.style.border = "2px solid var(--primary-color)";}
+            else if(this.id=="customamount"){this.style.border = "2px solid var(--primary-color)";}
+        }
+
+        function back2(){
+            if (this.id=="fullname"){this.style.border = ''}
+               else if(this.id=="emailaddress"){this.style.border = ''}
+                else if(this.id=="cardnumber"){this.style.border = ''}
+                    else if(this.id=="customamount"){this.style.border = "";}
+            }
+
+            function bold(){submitbutton.style.background = "#1a3b1a";
+        }
+
+        function back3(){submitbutton.style.background = '';
+    }
+
+    function checkform(){
+        var messagebox=document.querySelector("#messagebox");
+        var nameval=fullname.value;
+        var emailval=emailaddress.value;
+        var cardval=cardnumber.value;
+
+            // Reset borders to normal state (gray)
+
+        fullname.style.border = "1px solid #ccc";
+        emailaddress.style.border = "1px solid #ccc";
+        customamount.style.border = "1px solid #ccc";
+        cardnumber.style.border = "1px solid #ccc";
+        messagebox.textContent = "";
+
+            // Scene 1: missing personal info 
+
+        if(nameval=="" || emailval=="" || cardval==""){messagebox.textContent="Please fill in all required fields.";
+        messagebox.style.color="red";
+
+        if (nameval=="") {fullname.style.border = "2px solid red";}
+        if (emailval=="") {emailaddress.style.border = "2px solid red";}
+        if (cardval=="") {cardnumber.style.border="2px solid red";}
+        return;}
+
+            // Scene 2: invalid donation amount 
+
+        if (totalamount<= 0) {messagebox.textContent="Please select or enter a valid donation amount.";
+        messagebox.style.color="red";
+        customamount.style.border="2px solid red";
+        return;}
+
+            // Scene 3: invalid email 
+
+        if (isValidEmail(emailval)==false) {
+            messagebox.textContent="Please enter a valid email address.";
+            messagebox.style.color="red";
+            emailaddress.style.border="2px solid red";
+            return;}
+
+            // Scene 4: invalid card number
+
+            if (isValidCard(cardval) == false) {
+                messagebox.textContent = "Please enter a valid 16-digit credit card number.";
+                messagebox.style.color = "red";
+                cardnumber.style.border = "2px solid red";
+                return;
+            }
+
+            messagebox.textContent="Thank you, "+nameval+"! Your donation makes a difference.";
+            messagebox.style.color="green";
+
+                // Reset after successful donation
+
+            fullname.value = "";
+            emailaddress.value = "";
+            customamount.value = "";
+            cardnumber.value = "";
+            totalamount=0;
+            document.querySelector("#totaldisplay").textContent = "0";
+            clearSelection(); 
+        }
+
+        function isValidEmail(email) {
+            return email.includes("@") && email.includes(".");
+        }
+
+        function isValidCard(card) {
+            var cleanCard = card.replace(/\s+/g, '');
+            var regex = /^\d{16}$/;
+            return regex.test(cleanCard);
+        }
+
+            // Remove highlight from all buttons and custom amount input
+
+        function clearSelection() {
+            b1.classList.remove("selectedamount");
+            b2.classList.remove("selectedamount");
+            b3.classList.remove("selectedamount");
+            customamount.classList.remove("selectedamount");
+        }
+
+        function handlebuttonamount() {
+
+            clearSelection();  
+    this.classList.add("selectedamount"); // Highlight this button or input to show it is selected
+    customamount.value = "";
+    if (this.id == "b1") totalamount = 10;
+    else if (this.id == "b2") totalamount = 25;
+    else if (this.id == "b3") totalamount = 50;
+
+    totaldisplay.textContent = totalamount; 
+}
+
+customamount.addEventListener("input", function() {
+    clearSelection(); // 
+    this.classList.add("selectedamount"); 
+    
+    var inputamount = Number(this.value); 
+    
+    if (inputamount > 0) {
+        totalamount = inputamount;
+    } else {
+        totalamount = 0; 
+    }
+    
+    document.querySelector("#totaldisplay").textContent = totalamount; 
+});
+
+</script>
+
+</body>
+</html>
