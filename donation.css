@@ -23,43 +23,43 @@ h1, h2, h3 {
 /* ----------------------------- NAV BAR ---------------------------- */
 /* ---------------------- nav bar location */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 /* ----------------------nav bar items align right */
 ul li {
-    float: right;
+  float: right;
 }
 /* ---------------------- nav bar item styling */
 ul li a {
-    font-family: "Playfair Display";
-    display: block;
-    color: #3a4149;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  font-family: "Playfair Display";
+  display: block;
+  color: #3a4149;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 /* ---------------------- nav bar item hover effect */
 ul li a:hover {
-    color: #b8945f; 
-    text-decoration: underline;
-    font-weight: bold;
+  color: #b8945f; 
+  text-decoration: underline;
+  font-weight: bold;
 }
 /* ---------------------- nav bar container */
 #nav_bar {
-    background-color: white;
-    padding: 16px 72px;
-    border-bottom: 2px solid #b8945f;
+  background-color: white;
+  padding: 16px 72px;
+  border-bottom: 2px solid #b8945f;
 }
 
 #logo{
-    color:#2c5f2d;
-    font-family: "Playfair Display";
-        font-weight: bold;
-        font-size: 18px;
-    padding: 14px 16px;
+  color:#2c5f2d;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 18px;
+  padding: 14px 16px;
 }
 
 
@@ -71,13 +71,13 @@ ul li a:hover {
 
 /* FOOTER --------------------------------------------------------- */
 #footer-content{
-    background-color: #2c5f2d;
-    color:#faf8f3;
-    padding: 32px;
+  background-color: #2c5f2d;
+  color:#faf8f3;
+  padding: 32px;
 }
 
 #copyright{
-    text-align: center;
+  text-align: center;
 }
 
 .herosection{
@@ -110,7 +110,7 @@ ul li a:hover {
 .donationlayout {
   display: flex;
   gap: 60px;
-  align-items: flex-start;
+  align-items: stretch;
   margin-top: 40px;
   padding-bottom: 40px;
 }
@@ -118,13 +118,32 @@ ul li a:hover {
 .impact {
   flex: 1;
   padding-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .impactitems{
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 15px
+  justify-content: space-between; 
+  flex: 1;                        
+  gap: 15px;                      
+  margin-top: 15px;
+}
+
+.impactitem {
+  background-color: white; 
+  padding: 20px 25px;
+  border-radius: 12px;
+  border-left: 6px solid var(--primary-color); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); 
+  transition: all 0.3s ease; 
+}
+
+.impactitem:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
+  border-left-color: var(--accent-color); 
 }
 
 .impactitem h3{
@@ -205,8 +224,8 @@ ul li a:hover {
 }
 
 .selectedamount {
-    border: 2px solid var(--primary-color); 
-    color: var(--primary-color); 
-    font-weight: bold;
-    background-color: #f0f7f0; 
+  border: 2px solid var(--primary-color); 
+  color: var(--primary-color); 
+  font-weight: bold;
+  background-color: #f0f7f0; 
 }
