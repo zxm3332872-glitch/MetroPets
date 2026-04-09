@@ -76,6 +76,14 @@ ul li a:hover {
 }
 
 /* ----------------------------- BODY ---------------------------- */
+body{
+    margin: 0px;
+    padding: 0px;
+    color: #3a4149;
+    font-family:'Lora'; 
+    background-color: #faf8f3;
+}
+
 .banner {
     max-width: fit-content;
     margin:auto;
@@ -111,12 +119,6 @@ h1{
         font-size: larger;
         font-weight: normal;
     }
-}
-
-body {
-    color: #3a4149;
-    font-family:'Lora'; 
-    background-color: #faf8f3;
 }
 
 #search-bar-filler{
@@ -229,8 +231,4 @@ div.see_more{
 
 #copyright{
     text-align: center;
-}
-body {
-    margin: 0;
-    padding: 0;
 }
