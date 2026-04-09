@@ -1,7 +1,101 @@
-<main class="container">
-    <h1>Shop</h1>
-    <p>Assignee: Annie</p>
-    <div style="border: 1px solid var(--text-color); padding: 20px;">
-        [Shop List]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroPets - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">METROPETS</div>
+        <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donation.html">Donate</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Shop for a Cause</h1>
+            <p>Every purchase helps provide food, blankets, and medical care for stray animals.</p>
+        </div>
+
+        <!-- Controls Row: Filter Button | Sort | Search -->
+        <div class="shop-controls">
+            <!-- Filter Button (opens modal) -->
+            <button id="filterModalBtn" class="filter-trigger-btn">Filter ▼</button>
+
+            <!-- Sort Dropdown -->
+            <select id="sortSelect" class="sort-select">
+                <option value="default">Sort: Default</option>
+                <option value="price-asc">Sort: Price Low to High</option>
+                <option value="price-desc">Sort: Price High to Low</option>
+            </select>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+        </div>
+
+        <!-- Message Area -->
+        <div id="messageArea" class="message-area"></div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="product-grid"></div>
     </div>
-</main>
+
+    <!-- Filter Modal (Popup) -->
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Filter by Category</h3>
+            <div class="modal-filter-group">
+                <button data-category="all" class="filter-btn active">All</button>
+                <button data-category="food" class="filter-btn">Dog Food</button>
+                <button data-category="cat-food" class="filter-btn">Cat Food</button>
+                <button data-category="accessories" class="filter-btn">Accessories</button>
+                <button data-category="medical" class="filter-btn">Medical</button>
+                <button data-category="donation" class="filter-btn">Donation</button>
+            </div>
+            <button id="modalClearBtn" class="clear-btn" style="margin-top: 1rem;">Clear All Filters</button>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>Add to Cart <i class="fas fa-shopping-cart"></i></h3>
+            <span id="closeCartBtn" class="close-cart">&times;</span>
+        </div>
+        <div id="cartItemsList" class="cart-items-list">
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-total">Total: $<span id="cartTotalAmount">0</span></div>
+            <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div id="cartIcon" class="cart-icon">
+        <i class="fas fa-shopping-cart" style="font-size: 28px; color: white;"></i>
+        <span id="cartItemCount" class="cart-item-count">0</span>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MetroPets. All rights reserved.</p>
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>
