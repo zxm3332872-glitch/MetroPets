@@ -230,3 +230,7 @@ div.see_more{
 #copyright{
     text-align: center;
 }
+body {
+    margin: 0;
+    padding: 0;
+}
